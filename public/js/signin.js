@@ -158,13 +158,18 @@
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           var providerData = user.providerData;
-          var currentUser = user.uid;
-          var userRef = firebase.database().ref("users");
-          userRef.set({
-             currentUser: {
-                name: user.name,
-                email: user.email
-             }
+          
+          document.getElementById('quickstart-sign-in').addEventListener('click', function(e){
+            e.preventDefault();
+            document.getElementById('titlehead').innerHTML = "Please sign in"
+          });
+          document.getElementById('quickstart-sign-up').addEventListener('click', function(e){
+            e.preventDefault();
+            document.getElementById('titlehead').innerHTML = "Please sign up";
+          });
+          document.getElementById('quickstart-recover').addEventListener('click', function(e){
+            e.preventDefault();
+            document.getElementById('titlehead').textContent = "Password recovery"
           });
           // [START_EXCLUDE silent]
           //document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';

@@ -4,7 +4,7 @@ append styles
 	link(href='../css/dashboard.css', rel='stylesheet')
 	link(href='https://cdn.firebase.com/libs/firepad/1.4.0/firepad.css', rel='stylesheet')
 	link(href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css', rel='stylesheet')
-	link(href="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.css", rel="stylesheet")
+	link(href="../css/firechat.css", rel="stylesheet")
 block body 
 	nav.navbar.navbar-inverse.navbar-fixed-top
 		.container-fluid
@@ -30,78 +30,12 @@ block body
 			.col-sm-3.col-md-2.sidebar
 				ul.nav.nav-sidebar
 					li.active
-						a(data-toggle="tab" href='#dashboard')
-							| Dashboard 
-							span.sr-only (current)
-					li
 						a(data-toggle="tab" href='#code') Code Editor
 					li
 						a(data-toggle="tab" href='#messages') Messages/Chat
 
 			#main-pad.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
 				div.tab-content
-					div#dashboard.tab-pane.fade.in.active
-						form#create.form-inline
-							div.form-group
-								label.sr-only(for='language')
-								select#language.selectpicker(data-live-search="true" title="Select Language")
-									option abap
-									option abc
-									option actionscript
-									option ada
-									option apache_conf
-									option applescript
-									option asciidoc
-									option assembly_x86
-									option autohotkey
-									option batchfile
-									option c9search
-									option c_cpp
-									option cirru
-									option clojure
-									option cobol
-									option coffee
-									option coldfusion
-									option csharp
-									option css
-									option curly
-									option d
-									option dart
-									option diff
-									option django
-									option dockerfile
-									option dot
-									option drools
-									option eiffel
-									option ejs
-									option elixir
-									option elm
-									option erlang
-									option forth
-									option fortran
-									option html
-									option java
-									option json
-									option javascript
-									option lean
-									option less
-									option matlab
-									option mysql
-									option objectivec
-									option perl
-									option php
-									option powershell
-									option python
-									option ruby
-									option rhtml
-									option sass
-									option text
-									option xml
-								select#users.selectpicker(data-live-search="true" title="Add Collaborators" multiple)
-								button#pair.btn.btn-primary(type="submit") Create Coding Session
-								button#sendmsg.btn.btn-success Send A Message
-							
-						
 					div#code.tab-pane.fade
 						form#create.form-inline
 							div.form-group
@@ -159,70 +93,11 @@ block body
 									option sass
 									option text
 									option xml
-								select#users.selectpicker(data-live-search="true" title="Add Collaborators" multiple)
+								//select#users.selectpicker(data-live-search="true" title="Add Collaborators" multiple)
 								button#pair.btn.btn-primary(type="submit") Create Coding Session
-								button#sendmsg.btn.btn-success Send A Message
+								button#sendmsg.btn.btn-success.btn.btn-default.dropdown-toggle Share Coding Session
 						div#firepad-container
 					div#messages.tab-pane.fade
-						form#create.form-inline
-							div.form-group
-								label.sr-only(for='language')
-								select#language.selectpicker(data-live-search="true" title="Select Language")
-									option abap
-									option abc
-									option actionscript
-									option ada
-									option apache_conf
-									option applescript
-									option asciidoc
-									option assembly_x86
-									option autohotkey
-									option batchfile
-									option c9search
-									option c_cpp
-									option cirru
-									option clojure
-									option cobol
-									option coffee
-									option coldfusion
-									option csharp
-									option css
-									option curly
-									option d
-									option dart
-									option diff
-									option django
-									option dockerfile
-									option dot
-									option drools
-									option eiffel
-									option ejs
-									option elixir
-									option elm
-									option erlang
-									option forth
-									option fortran
-									option html
-									option java
-									option json
-									option javascript
-									option lean
-									option less
-									option matlab
-									option mysql
-									option objectivec
-									option perl
-									option php
-									option powershell
-									option python
-									option ruby
-									option rhtml
-									option sass
-									option text
-									option xml
-								select#users.selectpicker(data-live-search="true" title="Add Collaborators" multiple)
-								button#pair.btn.btn-primary(type="submit") Create Coding Session
-								button#sendmsg.btn.btn-success Send A Message
 						div#firechat-wrapper
 							
 	img#message(src="/images/message.png" alt="send message" width="60" height="60")			
