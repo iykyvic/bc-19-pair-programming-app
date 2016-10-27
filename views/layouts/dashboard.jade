@@ -15,7 +15,7 @@ block body
 					span.icon-bar
 					span.icon-bar
 				a.navbar-brand(href='/') Pair
-			#navbar.navbar-collapse.collapse
+			#navbar
 				ul.nav.navbar-nav.navbar-right
 					li
 						a(href='/') Home
@@ -30,13 +30,18 @@ block body
 			.col-sm-3.col-md-2.sidebar
 				ul.nav.nav-sidebar
 					li.active
-						a(data-toggle="tab" href='#code') Code Editor
+						a(data-toggle="tab" href='#code')
+							| Code Editor
+							span.sr-only (current)
 					li
 						a(data-toggle="tab" href='#messages') Messages/Chat
+					li
+						a(data-toggle="tab" href='#pairsessions') Pair Sessions
 
 			#main-pad.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
 				div.tab-content
-					div#code.tab-pane.fade
+					div#code.tab-pane.active
+						p#alertlang you need to choose a language first
 						form#create.form-inline
 							div.form-group
 								label.sr-only(for='language')
@@ -78,7 +83,7 @@ block body
 									option html
 									option java
 									option json
-									option javascript
+									option(selected="selected") javascript
 									option lean
 									option less
 									option matlab
@@ -95,12 +100,25 @@ block body
 									option xml
 								//select#users.selectpicker(data-live-search="true" title="Add Collaborators" multiple)
 								button#pair.btn.btn-primary(type="submit") Create Coding Session
-								button#sendmsg.btn.btn-success.btn.btn-default.dropdown-toggle Share Coding Session
+								//button#sendmsg.btn.btn-success.btn.btn-default Share Coding Session
+								div#sharelinks | share link: 
+									a#linked(href="")
 						div#firepad-container
-					div#messages.tab-pane.fade
+					div#messages.tab-pane
 						div#firechat-wrapper
+					div#pairsessions.tab-pane
+						div
+							caption session links
+							table.table
+								thead
+									tr
+										th language
+										th session link
+										th visit
+										th delete
+								tbody#sessionlinks
 							
-	img#message(src="/images/message.png" alt="send message" width="60" height="60")			
+	img#message(src="/images/message.png" alt="send message" width="60" height="60")
 append scripts
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js")
 	script(src="/ace-builds/src-noconflict/mode-javascript.js")
