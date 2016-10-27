@@ -1,6 +1,28 @@
-extends layout
+extends layouts/pair
+block body
+	.site-wrapper
+		.site-wrapper-inner
+			.cover-container
+				.masthead.clearfix
+					.inner
+						h3.masthead-brand Pair
+						nav
+							ul.nav.masthead-nav
+								li 
+									a(href="/") Home
+								li
+									a(href="/about") About
+								li.btn.btn-default.btn-sm
+									a(href="/sign-in#register") Start Here
+								li
+									a(href="/sign-in") Sign In
+				.inner.cover
+					img
+					h1.cover-heading You have reached and unknown coder land
+					p.lead Please return by the express shuttle below to pair land and start coding with your friends.
+					p.lead
+					a(href="/", class="btn btn-lg btn-default") Go Back to Pair Land
 
-block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+				.mastfoot
+					.inner
+						pair programming app for <a href="http://andela.co">Andela bootcamp cohort 19</a>, by <a href="https://iblog.online">Victor Enogwe</a>.

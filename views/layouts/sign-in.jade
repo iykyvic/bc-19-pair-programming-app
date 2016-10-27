@@ -1,0 +1,53 @@
+extends pair
+append styles
+	// Custom styles for this template
+	link(rel="stylesheet", href='../css/signin.css')
+	link(rel="stylesheet", href='https://www.gstatic.com/firebasejs/ui/live/0.5/firebase-ui-auth.css')
+block body
+	.site-wrapper
+		.site-wrapper-inner
+			.cover-container
+				.masthead.clearfix
+					.inner
+						h3.masthead-brand
+							a(href="/") Pair
+						nav
+							ul.nav.masthead-nav
+								li.active 
+									a(href="/") Home
+								li
+									a(href="/about") About
+								li.btn.btn-default.btn-sm.reg
+									a(href="/sign-in#register" id="call")
+								li
+									a(href="/sign-in" id="reg") Sign In
+				.inner.cover
+					form.form-signin
+						h2.form-signin-heading Please sign in
+						label.sr-only(for='inputEmail') Email address
+						input#inputEmail.form-control(type='email', name='email', placeholder='Email address', required='', autofocus='')
+						label.sr-only(for='inputPassword') Password
+						input#inputPassword.form-control(type='password', name='password', placeholder='Password', required='')
+						.checkbox
+							label
+								input(type='checkbox', value='remember-me')
+								|  Remember me
+						button#quickstart-sign-in.btn.btn-lg.btn-primary.btn-sm(type='submit') Sign in
+						button#quickstart-sign-up.btn.btn-lg.btn-success.btn-sm(type='submit') Sign up
+						button#quickstart-recover.btn.btn-lg.btn-danger.btn-sm(type='submit') Forgot Pass
+					div 
+						#firebaseui-auth-container
+
+				.mastfoot
+					.inner
+						pair programming app for <a href="http://andela.co">Andela bootcamp cohort 19</a>, by <a href="https://iblog.online">Victor Enogwe</a>.
+block scripts
+			script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
+			script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
+			script(src="https://www.gstatic.com/firebasejs/3.5.0/firebase.js")
+			script(src='/js/ripples.min.js')
+			script(src='/js/material.min.js')
+			script(src='/js/script.js')
+			script(src="https://www.gstatic.com/firebasejs/ui/live/0.5/firebase-ui-auth.js")
+			script(src='/js/signin.js')
+

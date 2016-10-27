@@ -1,0 +1,31 @@
+extends ../bootstrap
+append styles
+	//	!-- Custom styles for this template --
+	link(href="../css/cover.css", rel="stylesheet")
+
+block body
+	.site-wrapper
+		.site-wrapper-inner
+			.cover-container
+				.masthead.clearfix
+					.inner
+						h3.masthead-brand Pair
+						nav
+							ul.nav.masthead-nav
+								li.active 
+									a(href="/") Home
+								li
+									a(href="/about") About
+								li.btn.btn-default.btn-sm
+									a(href="/sign-in#register") Start Here
+								li
+									a(href="/sign-in") Sign In
+				.inner.cover
+					h1.cover-heading Code with others remotely.
+					p.lead You each get your own mouse cursor, and you're both always in control. Pair provides you with a robust IDE and makes remote pair programming or debugging effortless.
+					p.lead
+					a(href="/about", class="btn btn-lg btn-default") Learn more
+
+				.mastfoot
+					.inner
+						pair programming app for <a href="http://andela.co">Andela bootcamp cohort 19</a>, by <a href="https://iblog.online">Victor Enogwe</a>.
