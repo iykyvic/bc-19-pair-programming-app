@@ -30,6 +30,7 @@ Install the dependencies and devDependencies and start the server.
 $ cd bc-19-pair-programming-app
 $ npm install -d
 $ start app with DEBUG=express_example:* nodemon
+visit localhost:3000 to on your browser to see app in action
 ```
 
 For production environments...
@@ -37,7 +38,8 @@ For production environments...
 ```sh
 $ npm install --production
 $ npm run predeploy
-$ NODE_ENV=production node app
+$ start app with DEBUG=express_example:* nodemon
+visit localhost:3000 to on your browser to see app in action
 ```
 
 
