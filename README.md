@@ -27,7 +27,7 @@ CLone the [latest pre-built release](https://github.com/joemccann/dillinger/rele
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-$ cd pair
+$ cd bc-19-pair-programming-app
 $ npm install -d
 $ node app
 ```
@@ -42,11 +42,13 @@ $ NODE_ENV=production node app
 
 
 
-Contributors & Links
----
+### Contributors & Links
+```
    [iykyvic]: <https://github.com/iykyvic>
-   [git-repo-url]: <https://github.com/iykyvic/bc-19-pair-programming-app.git>
+   [live app]: <https://warm-garden-21658.herokuapp.com>
+   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
    [Ace Editor]: <http://ace.ajax.org>
    [node.js]: <http://nodejs.org>
    [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
    [express]: <http://expressjs.com>
+```
