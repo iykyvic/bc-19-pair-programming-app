@@ -29,7 +29,7 @@ Install the dependencies and devDependencies and start the server.
 ```sh
 $ cd bc-19-pair-programming-app
 $ npm install -d
-$ node app
+$ start app with DEBUG=express_example:* nodemon
 ```
 
 For production environments...
