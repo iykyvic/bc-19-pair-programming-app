@@ -103,7 +103,8 @@ window.onload = function(){
             if(currentUser == sessions[session].uid){
               document.getElementById("sessionlinks").innerHTML += '<tr id="'+ session + '"><td>'+ sessions[session].link + '</td>' + '<td><a class="btn btn-success btn-sm" href="' + sessions[session].link + '" target="_blank">GO TO SESSION</a></td><td><button id="'+ session + 'btn" class="btn btn-sm btn-danger">DELETE</button></td></tr>';
               //delete user session on button click
-              document.getElementById(session + "btn").addEventListener('click', function(){
+              document.getElementById(session + "btn").addEventListener('click', function(e){
+                //e.preventDefault();
                 document.getElementById(session).parentNode.removeChild(document.getElementById(session))
                 ref.child(session).remove()
                 if(window.location == sessions[session].link){
