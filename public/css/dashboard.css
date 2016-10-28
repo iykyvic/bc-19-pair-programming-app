@@ -17,6 +17,10 @@ html { height: 100%; }
 /*
  * Global add-ons
  */
+ .modal-content {
+    margin-left: 300px;
+    margin-top: 400px;
+  }
  #sharelinks{
   font-size: 15px;
   display: inline-block;
@@ -31,6 +35,7 @@ html { height: 100%; }
   border-bottom: 1px solid #eee;
 }
 #create{
+  display: inline-block;
   margin: -15px 0 5px 0;
 }
 #share{

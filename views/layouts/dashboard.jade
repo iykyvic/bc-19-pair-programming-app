@@ -41,7 +41,7 @@ block body
 			#main-pad.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
 				div.tab-content
 					div#code.tab-pane.active
-						p#alertlang you need to choose a language first
+						p#alertlang 
 						form#create.form-inline
 							div.form-group
 								label.sr-only(for='language')
@@ -99,26 +99,33 @@ block body
 									option text
 									option xml
 								//select#users.selectpicker(data-live-search="true" title="Add Collaborators" multiple)
-								button#pair.btn.btn-primary(type="submit") Create Coding Session
-								//button#sendmsg.btn.btn-success.btn.btn-default Share Coding Session
-								div#sharelinks | share link: 
+						a#pair.btn.btn-primary(href="/dashboard") Create Coding Session
+						div#sharelinks | share link: 
 									a#linked(href="")
 						div#firepad-container
 					div#messages.tab-pane
 						div#firechat-wrapper
 					div#pairsessions.tab-pane
 						div
-							caption session links
 							table.table
 								thead
 									tr
-										th language
-										th session link
+										//th language
+										th session share link
 										th visit
 										th delete
 								tbody#sessionlinks
-							
-	img#message(src="/images/message.png" alt="send message" width="60" height="60")
+	img#message(src="/images/message.png" alt="send message" width="60" height="60" data-toggle="modal" data-target="#mymodal")
+	div#mymodal.modal.fade
+		div.modal-dialog
+			div.modal-content
+				div.modal-header
+					button(type="button" class="close" data-dismiss="modal" aria-hidden="true") ×
+					h4.modal-title How to Use Pair
+				div.modal-body
+					p 1. load the dashboard page and share generated session links via chat to collaborators
+					p 2. create new session using the create session button and share links using the chat
+
 append scripts
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js")
 	script(src="/ace-builds/src-noconflict/mode-javascript.js")
